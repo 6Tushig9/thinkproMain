@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="off-screen-menu"><!--mobile menu-->
+        <ul><!--mobile menu-->
+            <ul><a href="serviceWindow.html">ҮЙЛЧИЛГЭЭ</a></ul><!--mobile menu-->
+            <ul><a href="academyWindow.html">АКАДЕМИ</a></ul><!--mobile menu-->
+            <ul><a href="adviceWindow.html">ЗӨВЛӨГӨӨ</a></ul><!--mobile menu-->
+            <ul><a href="#ContactSec">ХОЛБОО БАРИХ</a></ul><!--mobile menu-->
+            <ul><a href="serviceWindowEN.html" style="text-decoration:underline !important;">EN / MN</a></ul><!--mobile menu-->
+        </ul><!--mobile menu-->
+    </div><!--mobile menu-->
+    <header>
+        <div class="logoH"><img src="logoH.png"><a href="Main.html"></a></div>
+        <div class="menuBTN">
+            <div style="border-bottom: 1px solid var(--text-light);"><a href="serviceWindow.html">ҮЙЛЧИЛГЭЭ</a></div>
+            <div><a href="academyWindow.html">АКАДЕМИ</a></div>
+            <div><a href="adviceWindow.html">ЗӨВЛӨГӨӨ</a></div>
+            <div><a href="#ContactSec">ХОЛБОО БАРИХ</a></div>
+            <div style="margin-left: 3rem !important;"><a href="serviceWindowEN.html">EN / MN</a></div>
+        </div>
+        <div class="ham-menu"><!--mobile menu-->
+            <span></span><!--mobile menu-->
+            <span></span><!--mobile menu-->
+            <span></span><!--mobile menu-->
+        </div><!--mobile menu-->
+        <!-- <div class="languageH">EN / MN</div> -->
+    </header>
+
+
+    <div class="servTitle">
+        Манай үйлчилгээнүүд
+    </div>
+    <div class="servCont">
+        <div class="servMenu"  data-popup-content="business-update">
+            <h3>BUSINESS UPDATE</h3>
+            <p>Манай баг танай байгууллага дээр 
+                байршин ажиллаж тулгамдсан асуудлыг 
+                хамтдаа шийдвэрлэх үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+        <div class="servMenu" data-popup-content="strategy">
+            <h3>ТӨЛӨВЛӨГӨӨНДӨӨ ХҮРЭХ СТРАТЕГИ</h3>
+            <p>Борлуулалтын таамаглал ба төлөвлөгөөндөө 
+                хүрэх стратеги боловсруулах үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+        <div class="servMenu" data-popup-content="cost-report">
+            <h3>ӨРТӨГ ҮР АШГИЙН УДИРДЛАГЫН ТАЙЛАН</h3>
+            <p>Байгууллагын бизнес модельд тохируулан 
+                өртөг, зардлыг бууруулан ашгийг өсгөх 
+                тайлан боловсруулах үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+        <div class="servMenu" data-popup-content="inventory">
+            <h3>БАРАА МАТЕРИАЛЫН НӨӨЦ ТӨЛӨВЛӨЛТE</h3>
+            <p>Бараа материалын нөөцийг сард ердөө 
+                2 цаг зарцуулан автоматаар гүйцэтгэх 
+                үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+        <div class="servMenu" data-popup-content="investment">
+            <h3>ХӨРӨНГӨ ОРУУЛАЛТЫН ТООЦООЛОЛ ХИЙХ</h3>
+            <p>Төсөл амжилттай болох эсэхийг урьдчилан 
+                тооцоолол хийх, амжилтад хүргэх 
+                төлөвлөгөө боловсруулах үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+        <div class="servMenu" data-popup-content="power-bi">
+            <h3>POWER BI НЭВТРҮҮЛЭЛТ</h3>
+            <p>Байгууллагын бүхий л үе шатыг цахимаар 
+                тайлагнах, хянах, удирдах боломжийг олгох 
+                үйлчилгээ</p>
+            <div class="moreBtn">
+                <button>Дэлгэрэнгүй...</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="popupOverlay" class="overlayServ">
+    <div class="popUpDesc">
+        <div id="popupContent"></div> <button onclick="closePopup()">x</button>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="footTop">
+            <div class="footlogo">
+                THINK PRO LLC
+            </div>
+            <div id="ContactSec" class="topCont">
+                <div class="footServ">
+                    <h2>Үйлчилгээ</h2>
+                    <p>
+                        <a href="serviceWindow.html">Business update</a>
+                        <a href="serviceWindow.html">Төлөвлөгөөндөө хүрэх стратеги</a>
+                        <a href="serviceWindow.html">Өртөг үр ашгийн удирдлагын тайлан/a>
+                        <a href="serviceWindow.html">Бараа материалын нөөц төлөвлөлт</a>
+                        <a href="serviceWindow.html">Хөрөнгө оруулалтын тооцоолол хийх</a>
+                        <a href="serviceWindow.html">Power BI нэвтрүүлэлт</a>
+                    </p>
+                </div>
+                <div class="footServ">
+                    <h2>Академи</h2>
+                    <p>
+                        <a href="academyWindow.html">Power BI + AI</a>
+                        <a href="academyWindow.html">Excel</a>
+                    </p>
+                </div>
+                <div class="footServ">
+                    <h2>Зөвлөгөө</h2>
+                    <p>
+                        <a href="adviceWindow.html">Зөвлөгөө хуудасруу очих...</a>
+                    </p>
+                </div>
+                <div class="footServ">
+                    <h2>Холбоо барих</h2>
+                    <p>9911 1087</p>
+                    <p>Luvsanjamts@thinkpro.mn</p>
+                </div>
+            </div>
+        </div>
+        <div class="backToTop">
+            <button id="bttopBTN">
+                <span class="arrow"></span>
+                <span class="arrow"></span>
+            </button>
+        </div>
+        <div class="endCredit">
+            <p>Powered by SprouX</p>
+            <div class="endLine"></div>
+            <div class="socials">
+                <a href="https://www.facebook.com/ThinkProLLC" target="_blank">
+                    <img src="FacebookSqr.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/thinkprollc/" target="_blank">
+                    <img src="instagram.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/@ThinkProCEO" target="_blank">
+                    <img src="youtube.png" alt="">
+                </a>
+            </div>
+        </div>
+<script>
+    const moreButtons = document.querySelectorAll('.moreBtn button');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupContent = document.getElementById('popupContent');
+
+    moreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const servMenu = this.closest('.servMenu');
+            const contentId = servMenu.dataset.popupContent;
+            const content = getPopupContent(contentId); // Function to get content
+
+            popupContent.innerHTML = content;
+            popupOverlay.style.display = 'flex';
+            document.body.classList.add('no-scroll');
+        });
+    });
+
+    function closePopup() {
+        popupOverlay.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+
+    popupOverlay.addEventListener('click', function(event) {
+        if (event.target === popupOverlay) {
+            closePopup();
+        }
+    });
+
+    function getPopupContent(contentId) {
+        switch (contentId) {
+            case 'business-update':
+                return `
+                <h2>BUSINESS UPDATE</h2>
+                <p>- Та зах зээлд тэргүүлэгч болох бизнес, стратегийн нууцыг мэдмээр байна уу?</p>
+                <p>- Та бизнесийн архитектураа тодорхойлж бизнесээ хялбараар удирдмаар байна уу?</p>
+                <p>- Та бизнесээ гар утаснаасаа удирдмаар байна уу?</p>
+                <p>Манай хөтөлбөрт хамрагдсанаар танай байгууллага бизнес архитектураа тодорхойлж, 
+                    стратеги, бизнес бүтэц, бизнесээ удирдан зохион байгуулах, зах зээлд тэргүүлэх 
+                    арга барилыг бий болгох 100% практик хөтөлбөр юм.</p>
+                <h3>АГУУЛГА</h3>
+                <p> ✅ Бизнесийн архитектурыг ойлгоно, өөрийн компани дээр хэрэгжүүлнэ<br>
+                    ✅ Дата архитектурыг ойлгоно, өөрийн компани дээр хэрэгжүүлнэ<br>
+                    ✅ Бизнес моделио бүтээнэ<br>
+                    ✅ Таны бизнест тохирсон бүтцийг тодорхойлно<br>
+                    ✅ Таны бизнест мэдээллийн урсгалыг тодорхойлно<br>
+                    ✅ Таны бизнесийн үнэ цэнийн хэлхээг тодорхойлно<br>
+                    ✅ Таны бизнест тохирсон чадавхыг бий болгоно<br>
+                    ✅ Стратегийн менежмент<br>
+                    ✅ Бизнес төлөвлөгөө<br>
+                    ✅ Борлуулалт, маркетинг<br>
+                    ✅ Санхүү<br>
+                    ✅ Худалдан авалт, нөөц төлөвлөлт, ложистик<br>
+                    ✅ Харилцагч талуудын уялдаа холбоо<br>
+                    ✅ Бүтээгдэхүүн, үйлчилгээний хөгжил<br>
+                    ✅ Үйлдвэрлэл<br>
+                    ✅ Хүний нөөц + IT + хууль<br>
+                    ✅ Өдөр тутмын үйл ажиллагааны хяналт<br><br>
+                </p>
+                <h3>ДАВУУ ТАЛ</h3>
+                <p> Зөвхөн таны бизнест тохирсон удирдах төгс <strong>"ШИЙДЭЛ"</strong>-г бид танд санал болгоно.<br><br>
+                    Бид зөвхөн сургалт, зөвлөгөө өгөөд орхихгүй <strong>"БОДИТ ҮР ДҮН"</strong>-г хамтдаа бий болгоно.</p><br>
+                <a href=" https://forms.gle/nUu8yMkXj5SkuSmm8" target="_blank">Үйлчигээ авах холбоос</a>
+            `;
+            case 'strategy':
+                return `
+                    <h2>ТӨЛӨВЛӨГӨӨНДӨӨ ХҮРЭХ СТРАТЕГИ</h2>
+                    <p>Бид танай бизнест тохирсон Борлуулалтын таамаглал, төлөвлөгөө бүхий тооцооллын арга заах болно.<br>
+                        Борлуулалт бол бизнесийн зүрхний цохилт, зөв таамаглаж, төлөвлөж чадвал тухайн компани зах зээлд амжилт олохын 1 үндэс юм.</p>
+                    <p>- Та борлуулалтын таамаглалаа тооцож чадаж байна уу?</p>
+                    <p>- Танай байгууллага борлуулалтын төлөвлөгөөндөө хүрэх стратегиа олсон уу?</p>
+                    <p>- Та бизнесийн борлуулалтаа зөв таамаглахын ач тусыг ойлгож байгаа юу?</p>
+                    <p>- Танай байгууллагын ирэх оны борлуулалтын төлөвлөгөө бэлэн үү?</p>
+                    <h3>ТОВЧ</h3>
+                    <p>Танай байгууллага нь борлуулалтын таамаглал, төлөвлөгөөгөө зөв боловсруулах арга барилыг сурснаар зах зээлд тэргүүлэгч болох үндэс тавигдах юм.</p>
+                    <h3>АГУУЛГА</h3>
+                    <p> ✅ Борлуулалтын таамаглалын тухай ойлголт<br>
+                        ✅ Борлуулалтын таамаглалаа зөв тооцсоны ач холбогдол<br>
+                        ✅ Борлуулалтын дата бүрдүүлэлт<br>
+                        ✅ Борлуулалтын таамаглал боловсруулах энгийн аргууд<br>
+                        ✅ Борлуулалтын таамаглал боловсруулах ахисан түвшний аргууд<br>
+                        ✅ Борлуулалтын төлөвлөгөө боловсруулах арга<br>
+                        ✅ Борлуулалтын төлөвлөгөөндөө хүрэх стратеги<br>
+                        ✅ EXCEL программ дээр ажиллана (ОУ болон Манай орны том корпорацууд EXCEL дээр боловсруулалтаа хийдэг)<br>
+                    </p>
+                    <h3>ДАВУУ ТАЛ</h3>
+                    <p> Бид зөвхөн сургалт, зөвлөгөө өгөөд орхихгүй <strong>"БОДИТ ҮР ДҮН"</strong>-г хамтдаа бий болгоно.<br><br>
+                        Сургалтад хамрагдсан бүх суралцагчид: <strong>"THINK PRO - EXCEL"</strong> хаалттай сургалтын группт үнэгүй хамрагдана.</p><br>
+                    <a href="https://forms.gle/MxSGvu4Yg3Wczeuy8 " target="_blank">Үйлчигээ авах холбоос</a>
+                `;
+            // Add cases for other services...
+            case 'cost-report':
+                return `
+                    <h2>ӨРТӨГ ҮР АШГИЙН УДИРДЛАГЫН ТАЙЛАН</h2>
+                    <p>Өртөг, зардлыг бууруулан Ашгийг жилд багадаа 1.5 тэрбум төгрөгөөр өсгөсөн өөрийн туршлага дээр үндэслэсэн сургалт, үйлчилгээг хүргэнэ.</p>
+                    <p>Зөвхөн танай байгууллагад зориулагдсан Өртөг, үр ашгийн удирдлагын тайлан бүхий файлтай болгоно.</p>
+                    <p>Бизнесийн амин сүнс, гол луужин бол Өртөг, үр ашгийн удирдлагын тайлан юм.</p>
+                    <p>Хэдийгээр бид нягтлан бодох бүртгэлийн дагуу тайлангаа гаргадаг боловч бизнес модельтойгоо уялдуулан өртгөө зөв тооцож байгаа эсэх, удирдлагын дотоод үр ашгийн тайланг зөв боловсруулсан эсэх дээр эргэлзээтэй байна.</p>
+                    <p>Бизнесийн байгууллагууд орлогын араас хэт хөөцөлдсөнөөр зардал үр ашгаа орхигдуулах нь элбэг байдаг.</p>
+                    <h3>АСУУЛТ</h3>
+                    <p>Та өртгөө ЗӨВ тооцож байгаа юу?</p>
+                    <p>Танай байгууллага бизнес модельтойгоо тохирсон удирдлагын дотоод үр ашгийн тайланг бэлтгэж чадаж байгаа юу?</p>
+                    <p>Та өртөг, зардлаа бууруулан ашгаа 2 дахин өсгөх аргыг мэдэх үү?</p>
+                    <h3>ТОВЧ</h3>
+                    <p>Манай сургалт, үйлчилгээ авснаар танай байгууллага бизнес модельтой 
+                        тохирсон өртөг, үр ашгийн удирдлагын тайлангаа зөв боловсруулж, 
+                        цаашдаа сар бүр өөрсдөө шинэчлэлт хийж, танай байгууллагад санхүүгийн 
+                        хяналт бий болж салбарын дунджаас илүү ашигтай ажиллах нөхцөл бүрдэнэ.</p>
+                    <p>Бизнест өртгөө ЗӨВ тооцох нь ашигт ажиллагаанд шууд буюу 100% нөлөөлдөг.</p>
+                    <p>Өртөг, зардлын ЗӨВ хуваарилалт хийснээр АШИГТ АЖИЛЛАГААГ нэмэгдүүлэх боломж бүрддэг.</p>
+                    <h3>АГУУЛГА</h3>
+                    <p> ✅ Өртөг, үр ашгийн тухай ойлголт<br>
+                        ✅ Бүтээгдэхүүний өртгийг нэгжийн түвшинд тооцох<br>
+                        ✅ Өртгийн төлөвлөгөөний тайлан, <br>
+                        ✅ Өртгийн гүйцэтгэл тайлан гаргах, <br>
+                        ✅ Өртгийн хяналт хийх<br>
+                        ✅ Орлогын ангилал<br>
+                        ✅ Зардлын ангилал<br>
+                        ✅ Зардлын шинжилгээ<br>
+                        ✅ Үр ашгийн удирдлагын тайлан<br>
+                        ✅ Ашигт ажиллагааны шинжилгээ<br>
+                        ✅ Өөрийн компанидаа өртгийн файлтай болох /сар бүр шинэчлэх боломжтой/<br>
+                        ✅ Өөрийн компанидаа үр ашгийн файлтай болох /сар бүр шинэчлэх боломжтой/<br>
+                        ✅ EXCEL программ дээр ажиллана (ОУ болон Манай орны том корпорацууд EXCEL дээр боловсруулалтаа хийдэг)<br>
+                    </p>
+                    <h3>ДАВУУ ТАЛ</h3>
+                    <p> Бид зөвхөн сургалт, зөвлөгөө өгөөд орхихгүй <strong>"БОДИТ ҮР ДҮН"</strong>-г хамтдаа бий болгоно.<br>
+                        - Өртгөө ЗӨВ тооцож сурна<br>
+                        - Өөрийн бодит туршлагад үндэслэн Өртөг, зардлаа бууруулж жилдээ 1.5 тэрбум төгрөгийг нэмэгдүүлж чадсан аргууд<br>
+                        - Өртгийн гүйцэтгэл гаргаж, төлөвлөж, хянаж сурна<br>
+                        - Үр ашгийн дотоод тайлан<br>
+                        - Өртөг, үр ашгийн удирдлагын тайлан бүхий файлтай болгоно</p><br>
+                    <a href="https://forms.gle/MQFuLfciZvnE66ex5" target="_blank">Үйлчигээ авах холбоос</a>
+                `;
+            case 'inventory':
+                return `
+                    <h2>БАРАА МАТЕРИАЛЫН НӨӨЦ ТӨЛӨВЛӨЛТE</h2>
+                    <p>Бид таны бизнест тохирсон бараа материалын захиалга бүхий НӨӨЦ төлөвлөлтийн файлтай болгоно.</p>
+                    <p>- Та өөрийн бизнест тохирсон БМ захиалга бүхий сард ердөө 2 цаг зарцуулдаг бүрэн автомат НӨӨЦ төлөвлөлтийн файлтай болмоор байна уу?</p>
+                    <p>- Танай бараа, бүтээгдэхүүний нөөцөд тасалдал үүсэж байна уу?</p>
+                    <p>- Та бараа материалын захиалгаа хэзээ, хэдий хэмжээгээр хийхээ тооцож чадаж байгаа юу?</p>
+                    <p>- Та бараа материалынхаа нөөцөд хяналт тавьж чадаж байгаа юу?</p>
+                    <h3>ТОВЧ</h3>
+                    <p>“Бараа материалын НӨӨЦ төлөвлөлтийг сард ердөө 2 цагт тооцох боломжтой”<br>
+                    ТЭРБУМ-аар үнэлэгдэх ЭРСДЭЛЭЭ 1 ажилтныхаа цалингаар хаах боломжтой<br>
+                    Танай байгууллага нь бараа материалын захиалга бүхий нөөц төлөвлөлтийн ажиллахад хялбар файлтай болж, бараа материалын нөөцөө зохистой түвшинд байлгаж, хянах боломж бүрдэх юм.</p>
+                    <h3>АГУУЛГА</h3>
+                    <p> ✅ Нөөц төлөвлөлтийн тухай ойлголт<br>
+                        ✅ Хэрэгцээг тодорхойлох<br>
+                        ✅ Бараа материалын захиалгын файл дээр ажиллах<br>
+                        ✅ Захиалгаа хянах<br>
+                        ✅ Бараа материалын эргэцийн шинжилгээ хийх<br>
+                        ✅ Агуулах, хадгалалтын зардал тооцох<br>
+                        ✅ ABC , XYZ шинжилгээ холбоо хамаарлыг дүгнэх <br>
+                        ✅ Бүтээгдэхүүн тус бүрийн нөөц төлөвлөлтийн стратегийг тодорхойлох<br>
+                        ✅ Бизнест тохирсон нөөц төлөвлөлтийн файлтай болох<br>
+                        ✅ EXCEL программ дээр ажиллана (ОУ болон Манай орны том корпорацууд EXCEL дээр нөөц төлөвлөлтөө бэлтгэдэг)<br>
+                    </p>
+                    <h3>ДАВУУ ТАЛ</h3>
+                    <p> Бид зөвхөн сургалт, зөвлөгөө өгөөд орхихгүй <strong>"БОДИТ ҮР ДҮН"</strong>-г хамтдаа бий болгоно.</p><br>
+                    <a href="https://forms.gle/P3X5eJHCRdRCvwuR6" target="_blank">Үйлчигээ авах холбоос</a>
+                `;
+            case 'investment':
+                return `
+                    <h2>ХӨРӨНГӨ ОРУУЛАЛТЫН ТООЦООЛОЛ ХИЙХ</h2>
+                    <h3>АСУУЛТ</h3>
+                    <p>- Төсөл бүхэлдээ хэрхэн ашигтай вэ? </p>
+                    <p>- Нэгж бүтээгдэхүүний түвшинд хэдэн хувийн ашигтай вэ? </p>
+                    <p>- Хэдий хэмжээний хөрөнгө оруулалт шаардлагатай вэ?</p>
+                    <p>- Хөрөнгө оруулалт хэдий хэмжээний борлуулалтаар, ямар хугацаанд нөхөх боломжтой вэ? </p>
+                    <p>Зэргийн харах, урьдчилан таамаглах боломжтой юм.</p>
+                    <h3>ТОВЧ</h3>
+                    <p>Тус үйлчилгээ нь төсөл бүхэлдээ амжилттай болох эсэхийг урьдчилан тооцоолох боломжийг олгодог</p>
+                    <h3>АГУУЛГА</h3>
+                    <p> ✅ Өртгийн тооцоолол<br>
+                        ✅ Үр ашгийн тооцоолол<br>
+                        ✅ Хөрөнгө оруулалтын тооцоолол<br>
+                        ✅ Ашигт ажиллагааны шинжилгээ<br>
+                        ✅ Хугарлын цэгийн шинжилгээ<br>
+                        ✅ Төслийн өгөөжийн шинжилгээ<br>
+                        ✅ EXCEL программ дээр ажиллана (ОУ болон Манай орны том корпорациуд EXCEL дээр санхүүгийн төсвөө бэлтгэдэг)<br>
+                    </p>
+                    <h3>ДАВУУ ТАЛ</h3>
+                    <p> Бид зөвхөн сургалт, зөвлөгөө өгөөд орхихгүй <strong>"БОДИТ ҮР ДҮН"</strong>-г хамтдаа бий болгоно.</p><br>
+                `;
+            case 'power-bi':
+                return `
+                    <h2>POWER BI НЭВТРҮҮЛЭЛТ</h2>
+                    <p> ... (Your content here) ... </p>
+                    <a href="" target="_blank">Үйлчигээ авах холбоос</a>
+                `;
+            default:
+                return '<p>Content not found.</p>';
+        }
+    }
+
+</script>
+
+<script>
+    const backToTopButton = document.getElementById("bttopBTN");
+
+    backToTopButton.addEventListener("click", function() {
+        window.scrollTo({ top:0, behavior: "smooth"});
+    });
+
+</script>
+
+    </footer>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Fade in effect when page loads
+        document.body.classList.add("loaded");
+
+        // Handle link clicks for fade-out effect
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                // Prevent fade-out on internal page jumps
+                if (this.hash) {
+                    return;
+                }
+
+                if (this.getAttribute("target") !== "_blank" && this.href) {
+                    e.preventDefault();
+                    const url = this.href;
+                    document.body.classList.add("fade-out");
+
+                    // Wait for the fade-out transition before navigating
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
+    <script src="effects.js"></script>
+</body>
+</html>
