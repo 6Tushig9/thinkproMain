@@ -2,13 +2,18 @@
     /* Color Variables */
     --primary-color: #3498db; /* Example blue */
     --secondary-color: #e74c3c; /* Example red */
-    --background-light: #f4f4f4;
+    /* --background-light: #f4f4f4; */
+    --background-light: #F5F5F5;
     --background-dark: #19242e;
     --background-darkblur: #19242ede;
     --background-darkblur2: #19242e82;
+    /* --background-dark: #636365;
+    --background-darkblur: #636365d0;
+    --background-darkblur2: #63636584; */
     --text-light: #ecf0f1;
     --text-dark: #2c3e50;
-    --accent-color: #f39c12; /* Example orange */
+    --accent-color: #d79423; /* Example orange */
+    --accent-lightcolor: #f0be27;
     --border-color: #ddd;
 
     /* Font Variables */
@@ -60,7 +65,7 @@ header{
     z-index: 1000;
 }
 .logoH a{
-    width: 4rem;
+    width: 12rem;
     height: 3.5rem;
     background-color: none;
     border: none;
@@ -77,7 +82,7 @@ header{
     height: 3.5rem;
 }
 .menuBTN {
-    width: 55rem;
+    width: 50rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -101,7 +106,7 @@ header{
     align-items: center;
     text-decoration: none;
     color: var(--text-light);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease-in-out;
@@ -201,7 +206,7 @@ header{
     gap: 12%;
 }
 .slogan h1{
-    font-size: 3.8rem;
+    font-size: 3.7rem;
     /* font-size: clamp(24px, 5vw, 60px); */
     font-family: var(--heading-font);
     font-weight: 300;
@@ -224,18 +229,18 @@ header{
     font-size: 1.7rem;
     border-radius: 5px;
     font-weight: 400;
-    background-color: var(--background-light);
+    background-color: var(--accent-color);
     padding: 0.5rem 2.5rem;
     text-decoration: none;
-    color: var(--text-dark);
-    border: 2px solid var(--background-light);
+    color: var(--text-light);
+    border: 2px solid var(--accent-color);
     transition: 0.3s ease;
 }
 .slogan a:hover{
     cursor: pointer;
-    background-color: unset;
+    background-color: var(--accent-lightcolor);
     color: var(--text-light);
-    border: 2px solid var(--background-light);
+    border: 2px solid var(--accent-color);
 }
 .founder{
     width: 35%;
@@ -479,11 +484,13 @@ n uusgahaar bol doodoh code ashiglana*/
 }
 .testi .aside > p::before {
     content: open-quote;
+    color: var(--accent-color);
     top: -40px;
     left: 10px;
 }
 .testi .aside > p::after {
     content: close-quote;
+    color: var(--accent-color);
     right: 0;
 }
 .testi .aside .name{
@@ -501,7 +508,7 @@ n uusgahaar bol doodoh code ashiglana*/
 .testi .aside .name h4{
     font-size: 2rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--accent-color);
     opacity: .8;
 }
 .testi .aside .name p{
@@ -510,9 +517,10 @@ n uusgahaar bol doodoh code ashiglana*/
     text-transform: uppercase;
     text-align: right;
     padding-top: 0.7rem;
+    color: var(--accent-color);
 }
 .testi :is(.swiper-button-next, .swiper-button-prev){
-    background-color: var(--text-dark);
+    background-color: var(--accent-color);
     top: 35%;
     width: 38px;
     height: 38px;
@@ -530,14 +538,14 @@ n uusgahaar bol doodoh code ashiglana*/
 
 }
 .testi .swiper-pagination span{
-    background-color: var(--text-dark);
+    background-color: var(--accent-lightcolor);
     transition: width .3s;
     opacity: 0.5;
 }
 .testi .swiper-pagination .swiper-pagination-bullet-active{
     width: 26px;
     border-radius: 4px;
-    background-color: var(--background-dark);
+    background-color: var(--accent-color);
 }
 /*Review section*/
 /*--------------Main END--------------*/
@@ -576,7 +584,7 @@ n uusgahaar bol doodoh code ashiglana*/
     flex-direction: column;
     justify-content: space-between;
     gap: 1.2rem;
-    background: linear-gradient(135deg, var(--background-light), #f9f9f9);
+    background: linear-gradient(135deg, var(--background-darkblur), var(--background-dark));
     padding: 1.8rem;
     border-radius: 20px;
     margin: 2rem 0;
@@ -591,13 +599,13 @@ n uusgahaar bol doodoh code ashiglana*/
 
 .servMenu h3 {
     font-size: 1.4rem;
-    color: var(--text-dark);
+    color: var(--accent-lightcolor);
     font-weight: 600;
 }
 
 .servMenu p {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-light);
     line-height: 1.6;
 }
 
@@ -612,7 +620,7 @@ n uusgahaar bol doodoh code ashiglana*/
     padding: 8px 20px;
     border-radius: 12px;
     color: var(--text-light);
-    background: var(--text-dark);
+    background: var(--accent-color);
     border: none;
     font-weight: 500;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
@@ -620,8 +628,8 @@ n uusgahaar bol doodoh code ashiglana*/
 
 .moreBtn button:hover {
     cursor: pointer;
-    background: var(--secondary-color);
-    transform: scale(1.05);
+    background: var(--accent-lightcolor);
+    transform: scale(1.02);
 }
 
 .overlayServ {
@@ -737,7 +745,7 @@ n uusgahaar bol doodoh code ashiglana*/
     font-size: 1.5rem;
     position: sticky;
     top: 5.5rem; 
-    color: var(--text-light);
+    color: var(--accent-color);
     padding: 1.5rem 1.5rem;
     background-color: var(--background-dark);
     border-radius: 24px;
@@ -885,14 +893,14 @@ n uusgahaar bol doodoh code ashiglana*/
     font-weight: 600;
     text-decoration: none;
     color: var(--text-light);
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     border-radius: 8px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--accent-color);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .read-more-btn:hover, .read-more-btnEN:hover {
-    background-color: var(--background-darkblur);
+    background-color: var(--accent-lightcolor);
     transform: scale(1.01);
 }
 
@@ -965,7 +973,7 @@ n uusgahaar bol doodoh code ashiglana*/
     font-size: 1.05rem;
 }
 #back-button {
-    background-color: var(--primary-color); /* Uses your primary blue */
+    background-color: var(--accent-color); /* Uses your primary blue */
     color: var(--text-light); /* Uses your light text color */
     padding: 10px 40px;
     margin: 0 0 4rem 12rem;
@@ -977,7 +985,7 @@ n uusgahaar bol doodoh code ashiglana*/
 }
 
 #back-button:hover {
-    background-color: #0056b3; /* Darker blue on hover, consider a darker shade of primary */
+    background-color: var(--accent-lightcolor); /* Darker blue on hover, consider a darker shade of primary */
 }
 /*---------------Advice END---------------*/
 
