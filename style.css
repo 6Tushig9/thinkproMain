@@ -918,11 +918,14 @@ section.content-section {
     text-align: center;
 } */
 .acadCont {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-dark);
-  color: var(--text-light);
-  z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    gap: 2rem;
+    z-index: 1;
 }
 
 #particles-js {
