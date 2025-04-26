@@ -10,7 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ThinkProLLC",
+    "url": "https://thinkpro.mn",
+    "logo": "https://thinkpro.mn/ThinkproLogoNbg1.png",
+    "sameAs": [
+        "https://www.facebook.com/ThinkProLLC",
+        "https://www.instagram.com/thinkprollc/",
+        "https://www.youtube.com/@ThinkProCEO"
+    ]
+    }
+    </script>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <body>
     <div class="off-screen-menu"><!--mobile menu-->
         <ul><!--mobile menu-->
@@ -24,8 +39,25 @@
     <header>
         <div class="logoH"><img src="ThinkproLogoNbg.png"><a href="index.html"></a></div>
         <div class="menuBTN">
-            <div> <a href="serviceWindow.html">ҮЙЛЧИЛГЭЭ</a></div>
-            <div><a href="academyWindow.html">АКАДЕМИ</a></div>
+            <div class="dropdown">
+                <a href="serviceWindow.html">ҮЙЛЧИЛГЭЭ</a>
+                <div class="dropdown-content">
+                    <a href="serviceWindow.html">Business update</a>
+                    <a href="serviceWindow.html">Төлөвлөгөөндөө хүрэх стратеги</a>
+                    <a href="serviceWindow.html">Өртөг үр ашгийн удирдлагын тайлан</a>
+                    <a href="serviceWindow.html">Бараа материалын нөөц төлөвлөлт</a>
+                    <a href="serviceWindow.html">Хөрөнгө оруулалтын тооцоолол хийх</a>
+                    <a href="serviceWindow.html">POWER BI нэвтрүүлэлт</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="academyWindow.html">АКАДЕМИ</a>
+                <div class="dropdown-content">
+                    <a href="academyWindow.html">DATA ANALYSIS - практик</a>
+                    <a href="academyWindow.html">Санхүүгийн тайлангийн шинжилгээ</a>
+                    <a href="academyWindow.html">HR DATA ANALYSIS - практик</a>
+                </div>
+            </div>
             <div><a href="adviceWindow.html">ЗӨВЛӨГӨӨ</a></div>
             <div><a href="#ContactSec">ХОЛБОО БАРИХ</a></div>
             <div style="margin-left: 3rem !important;"><a href="MainEN.html">EN / MN</a></div>
@@ -39,15 +71,16 @@
     </header>
     <main>
         <div class="heroSec" data-aos="fade-up">
+            <div id="particles-js"></div>
             <div class="slogan">
                 <h1>
                     Дэлхийд өрсөлдөх Монгол 
                     компаниудыг бий болгоно.
                 </h1>
                 <h3>
-                    Бид үнэнч түнш тань байж, үргэлж 
-                    шинийг эрэлхийлж, хамтач бүтээлч 
-                    сэтгэлгээг эрхэмлэн ажиллах болно.
+                    Бизнес архитектур, Дата архитектур, 
+                    ата аналитик ур чадварын хөгжүүлэх 
+                    чиглэлээр анхдагч
                 </h3>
                 <a href="serviceWindow.html">Үйлчилгээ харах</a>
             </div>
@@ -56,7 +89,7 @@
             </div>
         </div>
 
-        <div class="companionSec" data-aos="fade-up">
+        <div class="companionSec">
             <h1>Хамтрагч байгууллагууд</h1>
             <div class="slider">
                 <div class="slider-items">
@@ -145,9 +178,11 @@
         </div>
 
         <div class="milestoneSec" data-aos="fade-up">
+            
+            <div id="particles-js"></div>
             <div>
-                <h1>+2000</h1>
-                <h3>Хүнд үйлчилгээ үзүүлж сургалт оров.</h3>
+                <h1>15000</h1>
+                <h3>Нийгмийн хариуцлагын хүрээнд 15000 хүнд анхан шатны мэдлэгийг үнэ төлбөргүй хүргэв.</h3>
             </div>
             <div>
                 <h1>+200</h1>
@@ -159,14 +194,15 @@
                 <h3>Манай үйлчилгээг авснаар байгууллагууд бүтээмжээ 500% нэмэв</h3>
             </div>
             <div>
-                <h1>21</h1>
-                <h3>Аймагт очиж сургалт орсноор Монгол улсын өнцөг булан бүрд хүрч ажиллав</h3>
+                <h1>20тэрбум</h1>
+                <h3>Нийгмийн сайн сайхны төлөөх төсөл хөтөлбөрт 20 гаруй тэрбум төгрөгийн хөрөнгө оруулалт татаж өгөв.</h3>
             </div>
         </div>
 
-        <!-- <div class="dashboard">
-            <iframe title="1116 - Uur" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=4ea7cbb9-4fd9-4888-8728-70f36b9121cb&autoAuth=true&ctid=81563cd3-7a0b-4698-ae25-70ade4cd57db" frameborder="0" allowFullScreen="true"></iframe>
-        </div> -->
+        <div class="dashboard">
+            <iframe title="Web" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiN2E1Njc5MjEtYzc0OC00OGYwLTk2NGYtNzc3ZDk4NGZjYjc3IiwidCI6IjlmYzEzYTQzLTJkM2MtNDcyNy05MTZmLTZkYjdlZDMzN2I5ZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+            <!-- <iframe title="1116 - Uur" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiMGYyM2NiM2MtZjZiMC00ZTM0LTgwODItNjYwMmY0Yzg4ZmI3IiwidCI6IjlmYzEzYTQzLTJkM2MtNDcyNy05MTZmLTZkYjdlZDMzN2I5ZiIsImMiOjEwfQ%3D%3D&pageName=f8ad023366bb5ea45f99" frameborder="0" allowFullScreen="true"></iframe>         -->
+        </div>
 
         <!--customer review section-->
         <div id="page" class="site" data-aos="fade-up">
@@ -180,6 +216,41 @@
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <div class="wrapper">
+                                    <div class="thumbnail"><img src="setgegdel3.png" alt=""></div>
+                                    <div class="aside">
+                                        <p>"Power BI-ийн эрин үед, PowerPoint ашиглан ганцхан график хийж байсан нь хоцрогдсон 
+                                            гэдгээ ойлголоо. Сургалтын хөтөлбөр маш ойлгомжтой, цэгцтэй бөгөөд багш нар нь 
+                                            хүртээмжтэй байсан. Богино хугацаанд үр дүнтэй суралцаж, амжилттай ажил дээр хэрэглэх 
+                                            чадвартай болсон. Ялангуяа Power BI дээр холболтуудыг хийхэд хэцүү гэж бодож байсан ч 
+                                            сургалтад сууж хялбар, амархан гэдгийг ойлголоо. Мөн Power BI-г зөвхөн санхүүгийн 
+                                            мэргэжилтнүүд гэлтгүй бусад бүх байгууллагын ажилтнууд ашиглаж хамтдаа өсөж хөгжих 
+                                            хэрэгтэй юм байна. Энэ сургалт бусад сургалтуудтай харьцуулахад олон давуу талтай тул 
+                                            суугаарай гэж та бүхэнд зөвлөж байна.”</p>
+                                        <div class="name">
+                                            <h4>Улаанбаатар төмөр зам</h4>
+                                            <!-- <p>Хамт олон</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail"><img src="setgegdel7.jpg" alt=""></div>
+                                    <div class="aside">
+                                        <p>“Power BI-г өмнө нь зөвхөн санхүүгийн хүмүүс ашигладаг гэж боддог байсан бол 
+                                            одоо манай салбарт төдийгүй бүх салбарт ашиглах боломжтой гэдгийг мэдлээ.  
+                                            Дизайн сайтай, динамик тайлангуудыг бүтээж, мэдээллээ шинэ түвшинд боловсруулж, 
+                                            олон мэдээллийг нэгтгэн хянах боломжийг олгодгоороо давуу талтай юм байна. Багш 
+                                            ур чадвартай бөгөөд, эерэг уур амьсгалтай хамт олон байлаа.”</p>
+                                        <div class="name">
+                                            <h4>Иргэний Нисэхийн Ерөнхий Газар</h4>
+                                            <!-- <p>Иргэд</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
                                     <div class="thumbnail"><img src="setgegdel1.png" alt=""></div>
                                     <div class="aside">
                                         <p>Манай суманд анх удаа зохион байгуулагдсан энэ сургалт маш өгөөжтэй байлаа. 
@@ -190,7 +261,7 @@
                                             Сургалт хүлээлтээс давсан, бүүр 200% үр дүнтэй байсанд баярлалаа!</p>
                                         <div class="name">
                                             <h4>Ерөө сум</h4>
-                                            <p>Иргэд</p>
+                                            <!-- <p>Иргэд</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -208,26 +279,51 @@
                                             болсондоо баяртай байна</p>
                                         <div class="name">
                                             <h4>Дарханы төмөрлөгийн үйлдвэр</h4>
-                                            <p>Хамт олон</p>
+                                            <!-- <p>Хамт олон</p> -->
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="swiper-slide">
                                 <div class="wrapper">
-                                    <div class="thumbnail"><img src="setgegdel3.png" alt=""></div>
+                                    <div class="thumbnail"><img src="setgegdel4.jpg" alt=""></div>
                                     <div class="aside">
-                                        <p>"Power BI-ийн эрин үед, PowerPoint ашиглан ганцхан график хийж байсан нь хоцрогдсон 
-                                            гэдгээ ойлголоо. Сургалтын хөтөлбөр маш ойлгомжтой, цэгцтэй бөгөөд багш нар нь 
-                                            хүртээмжтэй байсан. Богино хугацаанд үр дүнтэй суралцаж, амжилттай ажил дээр хэрэглэх 
-                                            чадвартай болсон. Ялангуяа Power BI дээр холболтуудыг хийхэд хэцүү гэж бодож байсан ч 
-                                            сургалтад сууж хялбар, амархан гэдгийг ойлголоо. Мөн Power BI-г зөвхөн санхүүгийн 
-                                            мэргэжилтнүүд гэлтгүй бусад бүх байгууллагын ажилтнууд ашиглаж хамтдаа өсөж хөгжих 
-                                            хэрэгтэй юм байна. Энэ сургалт бусад сургалтуудтай харьцуулахад олон давуу талтай тул 
-                                            суугаарай гэж та бүхэнд зөвлөж байна.”</p>
+                                        <p> “Сургалт маань маш цэгцтэй, ойлгомжтой байсан. Excel, Power BI хоёрын уялдаа холбоог 
+                                            илүү сайн ойлгож, өгөгдөл дээр үндэслэн хурдан, оновчтой шийдвэр гаргах арга барилд 
+                                            суралцлаа. Тайлан боловсруулах хугацаа багасч, ажлын бүтээмж нэмэгдсэн. Үнэхээр 
+                                            хэрэгтэй сургалт байлаа.”</p>
                                         <div class="name">
-                                            <h4>Улаанбаатар төмөр зам</h4>
-                                            <p>Хамт олон</p>
+                                            <h4>Санхүүгийн Зохицуулах Хороо</h4>
+                                            <!-- <p>Хамт олон</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail"><img src="setgegdel6.jpg" alt=""></div>
+                                    <div class="aside">
+                                        <p>  “Дата мэдээлэлтэй ажиллахад илүү хялбар болсон. Өмнө нь олон алхамтай хийдэг 
+                                            байсан ажлыг одоо богино хугацаанд, үр дүнтэй хийж сурсан. Power BI-г статистикийн 
+                                            өгөгдөлд хэрхэн ашиглах вэ гэдгийг бодитоор сурсан маань маш том дэвшил байлаа.”</p>
+                                        <div class="name">
+                                            <h4>Үндэсний Статистикийн Хороо</h4>
+                                            <!-- <p>Хамт олон</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail"><img src="setgegdel5.jpg" alt=""></div>
+                                    <div class="aside">
+                                        <p>  “Бид өгөгдлийг зөв боловсруулж, ойлгомжтой хэлбэрээр дүрслэх нь яагаад чухал вэ 
+                                            гэдгийг энэ сургалтаар илүү сайн ойлголоо. Power BI ашиглаад тайлан, dashboard-оо 
+                                            үзэмж сайтай, ойлгомжтой болгох боломжтой юм байна лээ. Онол биш, яг бодит ажил 
+                                            дээр хэрэглэх практик мэдлэг авсандаа баяртай байна.”</p>
+                                        <div class="name">
+                                            <h4>АПУ ХК</h4>
+                                            <!-- <p>Хамт олон</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -245,11 +341,14 @@
     <footer data-aos="fade-up">
         <div class="footTop">
             <div class="footlogo">
-                THINK PRO LLC
+                <img src="ThinkproLogoNbg.png" alt="">
             </div>
             <div id="ContactSec" class="topCont">
                 <div class="footServ">
-                    <h2>Үйлчилгээ</h2>
+                    <div class="footservLog">
+                        <img src="customer-service.png" alt="">
+                        <h2>Үйлчилгээ</h2>
+                    </div>
                     <p>
                         <a href="serviceWindow.html">Business update</a>
                         <a href="serviceWindow.html">Төлөвлөгөөндөө хүрэх стратеги</a>
@@ -260,20 +359,30 @@
                     </p>
                 </div>
                 <div class="footServ">
-                    <h2>Академи</h2>
+                    <div class="footservLog">
+                        <img src="academyFooter.png" alt="">
+                        <h2>Академи</h2>
+                    </div>
                     <p>
-                        <a href="academyWindow.html">Power BI + AI</a>
-                        <a href="academyWindow.html">Excel</a>
+                        <a href="academyWindow.html">DATA ANALYSIS - практик</a>
+                        <a href="academyWindow.html">Санхүүгийн тайлангийн шинжилгээ</a>
+                        <a href="academyWindow.html">HR DATA ANALYSIS - практик</a>
                     </p>
                 </div>
                 <div class="footServ">
-                    <h2>Зөвлөгөө</h2>
+                    <div class="footservLog">
+                        <img src="adviceFooter.png" alt="">
+                        <h2>Зөвлөгөө</h2>
+                    </div>
                     <p>
                         <a href="adviceWindow.html">Зөвлөгөө хуудасруу очих...</a>
                     </p>
                 </div>
                 <div class="footServ">
-                    <h2>Холбоо барих</h2>
+                    <div class="footservLog">
+                        <img src="contactFooter.png" alt="">
+                        <h2>Холбоо барих</h2>
+                    </div>
                     <p>+976-9911 1087</p>
                     <p>Luvsanjamts@thinkpro.mn</p>
                 </div>
@@ -289,14 +398,20 @@
             <p>Powered by SprouX</p>
             <div class="endLine"></div>
             <div class="socials">
-                <a href="https://www.facebook.com/ThinkProLLC" target="_blank">
-                    <img src="FacebookSqr.png" alt="">
+                <a href="https://www.youtube.com/@ThinkProCEO" target="_blank" class="social yt">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                    </svg>
                 </a>
-                <a href="https://www.instagram.com/thinkprollc/" target="_blank">
-                    <img src="instagram.png" alt="">
+                <a href="https://www.instagram.com/thinkprollc/" target="_blank" class="social ig">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
                 </a>
-                <a href="https://www.youtube.com/@ThinkProCEO" target="_blank">
-                    <img src="youtube.png" alt="">
+                <a href="https://www.facebook.com/ThinkProLLC" target="_blank" class="social fb">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                    <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.2l-.4 3h-1.8v7A10 10 0 0 0 22 12z"/>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -336,5 +451,93 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!--scroll based background logo movement-->
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.querySelector('.bg-logo');
+    window.addEventListener('scroll', () => {
+      const rotateDeg = window.scrollY * 0.01; // Adjust speed
+      logo.style.transform = `rotate(${rotateDeg}deg)`;
+    });
+  });
+</script> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      autoplay: {
+        delay: 1500, // 2 seconds
+        disableOnInteraction: false, // keeps autoplay even after user swipes
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "slide", // or try 'fade' or 'cube'
+      speed: 1000, // transition speed
+    });
+  });
+</script>
+
+<script>
+  particlesJS("particles-js", {
+        "particles": {
+        "number": {
+            "value": 70
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle"
+        },
+        "opacity": {
+            "value": 0.1
+        },
+        "size": {
+            "value": 5
+        },
+        "move": {
+            "enable": true,
+            "speed": 0.5,
+            "direction": "none",
+            "straight": false,
+            "out_mode": "out"
+        },
+        "line_linked": {
+            "enable": true,            // ✨ Enables the lines
+            "distance": 160,           // 🔹 Max distance to connect particles
+            "color": "#d79423",        // 🎨 Line color
+            "opacity": 0.2,            // 🌫️ Line transparency
+            "width": 1                // 📏 Line thickness
+        }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true
+        }
+      },
+      "onclick": {
+        "enable": false
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+
 </body>
+<div class="bg-logo-wrapper">
+  <img src="LogoBnW.png" alt="Logo" class="bg-logo">
+</div>
 </html>
+   

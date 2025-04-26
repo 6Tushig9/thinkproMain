@@ -27,6 +27,7 @@
     --background-dark: #121212;/*zohioj ugsun har ungu*/
     --background-darkblur: #121212d4;
     --background-darkblur2: #12121296;
+    --background-grey: #12121296;
     --text-light: #d9d9d9;
     --text-dark: #2c3e50;
     --accent-color: #d79423;
@@ -67,21 +68,83 @@ body.fade-out {
     opacity: 0;
 }
 
-/*--------header menu styles START--------*/
-header{
-    width: 100%;
-    height: 5.5rem;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--background-dark);
-    justify-content: space-between;
-    /* padding-right: 10rem;
-    padding-left: 10rem; */
-    padding: var(--container-padding); 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+
+.bg-logo-wrapper {
+  position: fixed;
+  top: -10%;
+  left: 60%;
+  width: 120vw;
+  height: 120vh;
+  z-index: -1; 
+  pointer-events: none; 
+  overflow: hidden;
 }
+
+.bg-logo {
+  width: 55vw;
+  opacity: 0.15;
+  transform-origin: center;
+  will-change: transform;
+  animation: spinLogo 60s linear infinite;
+}
+
+@keyframes spinLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  color: white;
+  max-width: 1200px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+} */
+
+
+
+
+/*--------header menu styles START--------*/
 .logoH a{
     width: 12rem;
     height: 3.5rem;
@@ -99,55 +162,111 @@ header{
     width: auto;
     height: 3.5rem;
 }
-.menuBTN {
-    width: 50rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+
+/* Header container */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121212;
+  padding: 1.5rem 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--container-padding);
 }
 
-.menuBTN div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Needed for the underline effect */
+/* Logo */
+.logo img {
+  height: 3.5rem;
 }
-.menuBTN div:hover {
-    cursor: pointer;
+
+/* Menu container */
+.menuBTN {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
 }
-.menuBTN div a {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-light);
-    font-size: 1.15rem;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease-in-out;
+
+/* Top-level menu links */
+.menuBTN a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 1rem;
+  position: relative;
 }
-/* Underline Effect */
-.menuBTN div a::after {
-    content: "";
-    position: absolute;
-    bottom: 0; /* Slightly below the text */
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--text-light);
-    transition: width 0.3s ease-in-out;
+
+/* Hover underline */
+.menuBTN a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: #d79423;
+  transition: width 0.3s ease-in-out;
 }
-/* Hover Effect: Expands from Left to Right */
-.menuBTN div a:hover::after {
-    width: 100%;
+
+.menuBTN a:hover {
+  color: #d79423;
 }
-/* Disappearance Effect: Shrinks from Right to Left */
-.menuBTN div a:not(:hover)::after {
-    width: 0;
+
+.menuBTN a:hover::after {
+  width: 100%;
 }
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  background-color: var(--background-darkblur);
+  padding-top: 1.5rem !important;
+  padding: 1rem 0;
+  min-width: 220px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  padding: 1.5rem 3rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--background-dark);
+}
+
+
+
+
 /* .languageH{
     display: flex;
     text-align: center;
@@ -214,6 +333,10 @@ header{
     padding: var(--container-padding); 
     background-color: var(--background-dark);
     color: var(--text-light);
+      
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 .slogan{
     width: 65%;
@@ -230,7 +353,7 @@ header{
     font-weight: 300;
 }
 .slogan h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     /* font-size: clamp(11px, 2vw, 22px); */
     font-family: var(--heading-font);
     font-weight: 150;
@@ -253,6 +376,7 @@ header{
     color: var(--text-light);
     border: 2px solid var(--accent-color);
     transition: 0.3s ease;
+    z-index: 5;
 }
 .slogan a:hover{
     cursor: pointer;
@@ -271,6 +395,7 @@ header{
     min-width: 18rem;
     height: auto;
     border-radius: 50px;
+    z-index: 1;
 }
 /*Hero section*/
 
@@ -571,180 +696,133 @@ n uusgahaar bol doodoh code ashiglana*/
 
 
 /*--------------Service START--------------*/
-.servTitle, .servTitleEN {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    padding: var(--container-padding);
-    padding-top: 4rem !important;
-    text-transform: uppercase;
-}
+section.content-section {
+      display: flex;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 20rem;
+      padding-bottom: 0 !important  ;
+    }
 
-.servCont {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-    padding: var(--container-padding);
-    margin: 2rem 0;
-}
+    section.content-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
 
-.servMenu {
-    width: 25rem;
-    height: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.2rem;
-    background: linear-gradient(135deg, var(--background-darkblur), var(--background-dark));
-    padding: 1.8rem;
-    border-radius: 20px;
-    margin: 2rem 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+    .text-block {
+        width: 60%;
+        font-size: 1.25rem;
+    }
 
-.servMenu:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+    .text-block h2 {
+        font-size: 3rem;
+        padding: 1rem 3rem;
+        color: #1e1e1e;
+        line-height: 2.6rem;
+    }
+    .text-block p{
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+        line-height: 1.7rem;
+    }
 
-.servMenu h3 {
-    font-size: 1.4rem;
-    color: var(--accent-lightcolor);
-    font-weight: 600;
-}
+    .highlight {
+        color: #f57c00;
+        font-weight: 700;
+    }
 
-.servMenu p {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.6;
-}
+    .text-block button {
+        margin-top: 1rem !important;
+        background: #1e1e1e;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        margin: 1rem 3rem;
+    }
+    .text-block a{
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem 2rem;
+    }
+    .text-block button:hover{
+        background-color: #1e1e1ed4;
+        transition: 0.4s ease;
+    }
 
-.moreBtn {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+    .image-block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 2rem; /* distance from image to line */
+    }
 
-.moreBtn button {
-    font-size: 1rem;
-    padding: 8px 20px;
-    border-radius: 12px;
-    color: var(--text-light);
-    background: var(--accent-color);
-    border: none;
-    font-weight: 500;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
+    .image-block img {
+        display: block;
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-.moreBtn button:hover {
-    cursor: pointer;
-    background: var(--accent-lightcolor);
-    transform: scale(1.02);
-}
+    .image-divider {
+        position: absolute;
+        bottom: -1rem; /* position line below the image */
+        height: 2px;
+        background-color: #1e1e1e;
+    }
 
-.overlayServ {
-    display: none;
-    position: fixed;
-    top: 2.5rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-darkblur);
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-}
+    /* 🔹 For image on the RIGHT side */
+    .image-divider.right {
+        left: 0;
+        width: calc(80vw - 60% - 3rem); /* starts from image's bottom-left */
+    }
 
-.popUpDesc {
-    background-color: white;
-    padding: 2rem 2rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-height: 80vh;
-    overflow-y: auto;
-}
+    /* 🔹 For image on the LEFT side */
+    .align-left {
+        align-items: flex-start;
+    }
+    .image-divider.left {
+        right: 0;
+        width: calc(100vw - 60% - 3rem); /* starts from image's bottom-right */
+    }
 
-.popUpDesc h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-family: var(--heading-font);
-}
+    .image-divider.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
-.popUpDesc h3 {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: var(--heading-font);
-}
+    
+    .animate-left, .animate-right {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.5s ease;
+    }
 
-.popUpDesc p {
-    margin-bottom: 1.5rem;
-}
-.popUpDesc::-webkit-scrollbar {
-    width: 8px;
-}
-.popUpDesc a {
-    width: 100%;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 0.5rem 2rem;
-    margin-top: 4rem;
-    border-radius: 8px;
-    transition: 0.2s ease;
-}
+    .animate-left {
+        transform: translateX(-100px);
+    }
 
-.popUpDesc a:hover {
-    border: 1px solid var(--accent-color);
-    background-color: var(--accent-color);
-    color: var(--text-light);
-    cursor: pointer;
-}
-
-.popUpDesc button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-dark);
-}
-
-.no-scroll {
-    overflow: hidden;
-}
-
-
-
-.dashboard{
-    padding: var(--container-padding);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .visible {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
 /*--------------Service END--------------*/
-
+.dashboard{
+    width: 100%;
+    height: 48rem;
+    padding: var(--container-padding);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*--------------Academy START--------------*/
-.academyBody{
+/* .academyBody{
     display: flex;
     justify-content: center;
     padding: var(--container-padding);
@@ -756,9 +834,6 @@ n uusgahaar bol doodoh code ashiglana*/
     flex-direction: column;
     gap: 1.5rem;
 }
-/* .lessonWrapper-big{
-    width: 80%;
-} */
 .nameDiv{
     display: flex;
     justify-content: start;
@@ -793,8 +868,7 @@ n uusgahaar bol doodoh code ashiglana*/
 .youtubeWrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (height / width * 100) */
-}
+    padding-top: 56.25%; 
 
 .youtubeWrapper iframe {
     position: absolute;
@@ -849,6 +923,88 @@ n uusgahaar bol doodoh code ashiglana*/
     border-radius: 8px;
     transition: 0.3s ease;
     text-align: center;
+} */
+.acadCont {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  z-index: 1;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--container-padding);
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-side {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-side {
+    flex: 1;
+    padding: 1rem;
+}
+
+.text-side h4 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.text-side h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-side p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 0.7rem;
+    color: #ddd;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #555;
 }
 /*--------------Academy END--------------*/
 
@@ -1021,16 +1177,43 @@ n uusgahaar bol doodoh code ashiglana*/
 
 
 /*--------------Footer START--------------*/
-footer{
-    padding: var(--container-padding);
-    background-color: var(--background-dark);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-light);
-    padding-top: 3rem !important ;
+footer {
+  position: relative;
+  overflow: hidden;
+  padding: var(--container-padding);
+  background-image: radial-gradient(circle at top left, #1e1e1e 0%, #121212 100%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  padding-top: 3rem !important;
+  animation: fadeIn 0.6s ease-in-out;
+  z-index: 1;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: 20%; /* only 30-40% of logo visible */
+  left: 10%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background-image: url('ThinkproLogoNbg1.png'); /* ✅ This is correct for your current folder */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 .footTop{
     width: 100%;
@@ -1048,9 +1231,13 @@ footer{
     justify-content: center;
     align-items: start;
     font-size: 2.3rem;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     flex-wrap: wrap;
     padding: 1rem;
+}
+.footlogo img{
+    width: 12rem;
 }
 .topCont{
     width: 50rem;
@@ -1068,22 +1255,43 @@ footer{
     padding: 1rem;
     gap: 1rem;
 }
+.footservLog{
+    display: flex;
+    gap: 1rem;
+}
+.footservLog img{
+    height: 1.8rem;
+}
 .footServ p{
     display: flex;
     flex-direction: column;
     font-size: 1rem;
     gap: 1rem;
 }
-.footServ a{
+.footServ a {
+    position: relative;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 300;
     color: var(--text-light);
+    transition: color 0.3s;
 }
 .footServ a:hover{
-    text-decoration: underline;
-    cursor: pointer;
+    color: var(--accent-color);
 }
+
+/* .footServ a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+.footServ a:hover::after {
+    width: 100%;
+} */
 
 .backToTop {
     display: flex;
@@ -1164,30 +1372,55 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--text-light);
 }
 .endCredit p{
     font-size: 1.3rem;
     font-weight: 300;
 }
-.endLine{
-    width: 60%;
-    margin: 0 2rem 0 2rem;
+.endLine {
+    width: 65%;
+    margin: 0 2rem;
     height: 1px;
-    border: 1px solid var(--text-light);
+    background-color: var(--text-light);
+    border: none;
 }
-.socials{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* space between icons */
 }
-.endCredit img{
-    width: 1.8rem;
-    height: auto;
+
+.social {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* or use var(--background-light) if needed */
+  border-radius: 50%;
+  transition: background 0.3s ease;
 }
-.endCredit a{
-    text-decoration: none;
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  fill: var(--text-light);
+  transition: fill 0.3s ease;
 }
+
+.fb:hover .social-icon {
+  fill: #1877F2;
+}
+.ig:hover .social-icon {
+  fill: #E1306C;
+}
+.yt:hover .social-icon {
+  fill: #FF0000;
+}
+
 /*---------------Footer END---------------*/
 
 /*+++++++++++++++++different display size+++++++++++++++++*/
@@ -1266,6 +1499,73 @@ footer{
     .servTitle, .servTitleEN{
         padding: var(--1200padding);
     }
+    .dashboard{
+        height: 38rem;
+        padding: var(--1200padding);
+    }
+
+    
+    section.content-section {
+        width: 100%;
+        flex-direction: column-reverse !important;
+        padding: 2rem 1rem;
+        height: auto;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .text-block, .image-block {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    .text-block h2 {
+        font-size: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .text-block p {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .text-block button {
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .image-block {
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .image-block img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .image-divider {
+        display: none;
+    }
+    .bg-logo-wrapper {
+        position: fixed;
+        top: 10%;
+        left: 30%;
+    }
+    .bg-logo {
+        width: 150vw;
+        opacity: 0.15;
+        transform-origin: center;
+        will-change: transform;
+        animation: spinLogo 60s linear infinite;
+    }
+    .dashboard{
+        padding: var(--800padding);
+        height: 28rem;
+    }
 }
 
 @media (max-width: 1000px){
@@ -1330,6 +1630,10 @@ footer{
     .milestoneSec div{
         margin-bottom: 4rem;
     }
+    .dashboard{
+        height: 30rem;
+        padding: var(--1000padding);
+    }
 }
 
 
@@ -1351,6 +1655,7 @@ footer{
     .testi .swiper-slide-active .name{
         transform: translateX(-50px);
     }
+    
 }
 /*for Customer review only!!!!!  up*/
 
@@ -1447,4 +1752,6 @@ footer{
     .endLine{
         width: 100%;
     }
+
+    
 }
