@@ -814,7 +814,7 @@ section.content-section {
 /*--------------Service END--------------*/
 .dashboard{
     width: 100%;
-    height: 48rem;
+    height: 50rem;
     padding: var(--container-padding);
     margin-top: 5rem;
     margin-bottom: 5rem;
