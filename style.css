@@ -1022,7 +1022,8 @@ section.content-section {
     display: flex;
     justify-content: center;
     padding: var(--container-padding);
-    padding-bottom: 2rem !important;
+    padding-bottom: 5rem !important;
+    padding-top: 5rem !important;
 }
 
 .artwrapper, .artwrapperEN {
@@ -1035,7 +1036,7 @@ section.content-section {
 
 .article, .articleEN {
     width: 48%;
-    background-color: var(--background-light);
+    background-color: #1e1e1ea5;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1058,7 +1059,7 @@ section.content-section {
 
 .artCont h4, .artContEN h4 {
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 0.5rem;
     font-weight: 600;
     font-family: var(--heading-font);
@@ -1067,7 +1068,7 @@ section.content-section {
 .artCont p, .artContEN p {
     display: none;
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     line-height: 1.6;
     font-family: var(--main-font);
 }
