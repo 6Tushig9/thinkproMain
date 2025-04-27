@@ -728,7 +728,7 @@ section.content-section {
     }
 
     .highlight {
-        color: #f57c00;
+        color: var(--accent-color);
         font-weight: 700;
     }
 
