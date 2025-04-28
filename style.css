@@ -385,6 +385,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 4;
 }
 
 .founder-img-wrapper {
@@ -416,7 +417,7 @@ header {
     font-weight: 600;
     color: var(--text-light);
     font-family: var(--main-font);
-    background: linear-gradient(to top, var(--background-darkblur) 50%, transparent 100%);
+    background: var(--background-darkblur);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     z-index: 2;
