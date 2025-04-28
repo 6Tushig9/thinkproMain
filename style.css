@@ -379,19 +379,49 @@ header {
     color: var(--text-light);
     border: 2px solid var(--accent-color);
 }
-.founder{
+.founder {
     width: 35%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.founder img{
+
+.founder-img-wrapper {
+    position: relative;
     width: 100%;
     min-width: 18rem;
     height: auto;
+    overflow: hidden;
     border-radius: 50px;
-    z-index: 4;
 }
+
+.founder-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+/* Name inside the image */
+.founder-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-light);
+    font-family: var(--main-font);
+    background: linear-gradient(to top, var(--background-darkblur) 50%, transparent 100%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    z-index: 2;
+}
+
 /*Hero section*/
 
 /*companion section*/
@@ -408,7 +438,7 @@ header {
     color: var(--text-light);
 }
 .companionSec h1{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 400;
     text-transform: uppercase;
     padding: var(--container-padding);
@@ -1709,12 +1739,16 @@ footer::after {
         padding: 3rem 4rem;
     }
     .heroSec h1{
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     .slogan h3{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .founder-name{
+        font-size: 1rem;
     }
     .companionSec h1{
+        font-size: 1.7rem;
         padding: var(--800padding);
     }
     .milestoneSec{
