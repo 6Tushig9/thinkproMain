@@ -40,7 +40,7 @@
     /* Padding Variables */
     --container-padding: 1rem 15rem;
     --1200padding: 1rem 8rem;
-    --800padding: 1rem 4rem;
+    --800padding: 1rem 1rem;
 }
 
 html{
@@ -1479,7 +1479,7 @@ footer::after {
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
-        padding: 3rem 8rem;
+        padding: 3rem 2rem;
     }
     
     .heroSec a{
@@ -1488,6 +1488,7 @@ footer::after {
     .slogan{
         width: 100%;
         gap: 2rem;
+        align-items: center;
     }
     .slogan h1{
         font-size: 2.5rem;
@@ -1497,6 +1498,9 @@ footer::after {
     }
     .founder{
         width: 42%;
+    }
+    .companionSec{
+        align-items: center;
     }
     .companionSec h1{
         padding: var(--1200padding);
@@ -1738,13 +1742,15 @@ footer::after {
         left: 4rem;
     }
     .heroSec{
-        padding: 3rem 4rem;
+        padding: 3rem 2rem;
     }
     .heroSec h1{
         font-size: 2.1rem;
+        text-align: center;
     }
     .slogan h3{
         font-size: 1.3rem;
+        text-align: center;
     }
     .founder-name{
         font-size: 1rem;
