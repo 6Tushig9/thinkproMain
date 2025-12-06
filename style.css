@@ -483,8 +483,8 @@ n uusgahaar bol doodoh code ashiglana*/
   );
 } */
 .slider-items img, .slider-items1 img{
-    height: 5rem;
-    filter: grayscale(1);
+    height: 4rem;
+    /* filter: grayscale(1); */
 }
 .slider-items, .slider-items1{
     display: flex;
