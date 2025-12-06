@@ -1839,4 +1839,7 @@ footer::after {
         flex-direction: column;
         margin: var(--800padding);
     }
+    .content-block h1{
+        font-size: 1.6rem;
+    }
 }
