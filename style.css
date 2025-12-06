@@ -690,8 +690,9 @@ n uusgahaar bol doodoh code ashiglana*/
     color: var(--accent-color);
 }
 .testi :is(.swiper-button-next, .swiper-button-prev){
+    /* display: none; */
     background-color: var(--accent-color);
-    top: 35%;
+    top: 95%;
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -705,6 +706,7 @@ n uusgahaar bol doodoh code ashiglana*/
 }
 .testi .swiper-pagination {
     position: relative;
+    padding-top: 2rem;
 
 }
 .testi .swiper-pagination span{
@@ -1728,7 +1730,11 @@ footer::after {
     .testi .swiper-slide-active .name{
         transform: translateX(-50px);
     }
-    
+    .testi .swiper-pagination {
+        position: relative;
+        padding-top: 4rem;
+
+    }
 }
 /*for Customer review only!!!!!  up*/
 
